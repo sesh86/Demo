@@ -4,9 +4,21 @@ import './index.css';
 import App from './App';
 import Demo from './components/Demo';
 import Timer from './components/Timer';
+import NavBar from './components/NavBar';
 import * as serviceWorker from './serviceWorker';
+import {BrowserRouter, Route} from 'react-router-dom'
 
-ReactDOM.render(<Timer />, document.getElementById('root'));
+ReactDOM.render(
+    <BrowserRouter>
+    <div className="App">
+      <NavBar></NavBar>
+      <Route exact path="/" component={App}/>
+      <Route path="/Demo" component={Demo}/>
+      <Route path="/Timer" component={Timer}/>
+    </div>
+    </BrowserRouter>
+
+    , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

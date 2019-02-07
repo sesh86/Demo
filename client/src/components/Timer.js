@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 class Timer extends Component {
   constructor(props) {
     super(props);//it is essential to use super function before using this keyword
-    this.state = { seconds: 0,disableStart:true,disablePause:true};
+    this.state = { seconds: 0,disableStart:true,disablePause:true,disableStop:true};
     // this.pauseTime = this.pauseTime.bind(this);
     // this.resumeTime = this.resumeTime.bind(this);
     this.stop = this.stop.bind(this);
   }
 
   //called on mount - the callback function runs every second
-  componentDidMount() {this.resumeTime();}
+  componentDidMount() {
+    this.resumeTime();
+  }
 
   //wher to use this lifecycle method? let's see after routes and redux
   componentWillUnmount(){this.pauseTime();console.log('componentWillUnmount Timer');}
