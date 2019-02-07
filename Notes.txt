@@ -28,3 +28,11 @@ Day 5:
   -create new component - NavBar
   -Use NavLink/Link in NavBar
   -Exact Path vs Path
+
+  Part2:
+  -npm i axios
+  -Create new component - Users and Posts
+  -Use APIs to bring content to the same
+
+  Assignment:
+  Complete the site - Users/Posts/Comments/Albums/Photos

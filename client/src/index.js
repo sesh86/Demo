@@ -5,6 +5,9 @@ import App from './App';
 import Demo from './components/Demo';
 import Timer from './components/Timer';
 import NavBar from './components/NavBar';
+import Users from './components/Users';
+import Posts from './components/Posts';
+
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Route} from 'react-router-dom'
 
@@ -15,6 +18,8 @@ ReactDOM.render(
       <Route exact path="/" component={App}/>
       <Route path="/Demo" component={Demo}/>
       <Route path="/Timer" component={Timer}/>
+      <Route path="/Users" component={Users}/>
+      <Route path="/Posts/:id/:name" component={Posts}/>
     </div>
     </BrowserRouter>
 
